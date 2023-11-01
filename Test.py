@@ -25,12 +25,12 @@ def handle_new_message(event, vk, db):
             send_warning(vk, user_id)
         db.users.insert_one({"user_id": user_id, "message": message})
 
-vk_session = vk_api.VkApi(token='your_token')
+vk_session = vk_api.VkApi(token='Token')
 vk = vk_session.get_api()
 
 
-client = MongoClient('mongodb://localhost:27017/')
-db = client['mydatabase']
+client = MongoClient('Link')
+db = client['Mydatabase']
 
 
 longpoll = VkLongPoll(vk_session)
